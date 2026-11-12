@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HUMOR911 — a comedy agency and production house. Frontend prototype concept." />
+  <title>HUMOR911 — Comedy Agency</title>
+  <link rel="icon" type="image/png" href="assets/humor911-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="app/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#home" class="brand" data-testid="brand-logo-link">
+        <img src="assets/humor911-logo.png" alt="HUMOR911 logo" class="brand-logo" />
+        <span class="brand-name">HUMOR<em>911</em></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="#home" class="nav-link is-active" data-testid="nav-home">Home</a>
+        <a href="#comedians" class="nav-link" data-testid="nav-comedians">Comedians</a>
+        <a href="#about" class="nav-link" data-testid="nav-about">About Us</a>
+        <a href="#legacy" class="nav-link" data-testid="nav-legacy">Legacy</a>
+        <a href="#contact" class="nav-link" data-testid="nav-contact">Contact</a>
+      </nav>
+      <p id="mode">🌛</p>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-testid="nav-toggle-button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Comedy Agency &amp; Production House</p>
+          <h1 class="hero-title">
+            Every laugh is an <span class="highlight">emergency.</span><br />
+            We respond.
+          </h1>
+          <p class="hero-text">
+            HUMOR911 represents bold comedic voices and produces live comedy
+            experiences worth leaving the house for. Funny is our business —
+            and we take it seriously.
+          </p>
+          <div class="hero-ctas">
+            <a href="#comedians" class="btn btn-primary" data-testid="cta-meet-comedians">Meet Our Comedians</a>
+            <a href="#about" class="btn btn-ghost" data-testid="cta-our-story">Our Story</a>
+          </div>
+        </div>
+
+        <!-- Replace this block with real hero imagery when ready -->
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="hero-frame">
+            <img src="assets/humor911-logo.png" alt="" class="hero-badge" data-testid="hero-logo" />
+          </div>
+          <span class="hero-tag tag-1">EST. LAUGHS: DAILY</span>
+          <span class="hero-tag tag-2">100% COMEDY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMEDIANS ===================== -->
+    <section class="section section-alt" id="comedians">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The Roster</p>
+          <h2>Comedians on call</h2>
+          <p class="section-sub">
+            Fictional placeholder profiles — swap in real talent whenever you're ready.
+          </p>
+        </div>
+
+        <div class="comedian-grid">
+          <!-- Card 1 -->
+          <article class="comedian-card reveal" data-testid="comedian-card-dana">
+            <div class="comedian-photo">
+              <img src="https://placehold.co/600x720/FFC93C/111111?text=DV" alt="Portrait placeholder of Dana Voss" />
+            </div>
+            <div class="comedian-body">
+              <span class="specialty">Stand-up Comedy</span>
+              <h3>Dana Voss</h3>
+              <p>
+                A razor-sharp storyteller who turns everyday disasters into
+                standing ovations. Ten minutes with Dana and your worst day
+                becomes your favorite joke.
+              </p>
+              <div class="socials">
+                <a href="#" aria-label="Dana Voss on Instagram" data-testid="social-dana-instagram">IG</a>
+                <a href="#" aria-label="Dana Voss on X" data-testid="social-dana-x">X</a>
+                <a href="#" aria-label="Dana Voss on YouTube" data-testid="social-dana-youtube">YT</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="comedian-card reveal" data-testid="comedian-card-milo">
+            <div class="comedian-photo">
+              <img src="https://placehold.co/600x720/1A160C/FFC93C?text=MF" alt="Portrait placeholder of Milo Ferreira" />
+            </div>
+            <div class="comedian-body">
+              <span class="specialty">Sketch Comedy</span>
+              <h3>Milo Ferreira</h3>
+              <p>
+                Writer-performer with a trunk full of absurd characters and
+                zero respect for the fourth wall. If it can be parodied,
+                Milo has a wig for it.
+              </p>
+              <div class="socials">
+                <a href="#" aria-label="Milo Ferreira on Instagram" data-testid="social-milo-instagram">IG</a>
+                <a href="#" aria-label="Milo Ferreira on X" data-testid="social-milo-x">X</a>
+                <a href="#" aria-label="Milo Ferreira on YouTube" data-testid="social-milo-youtube">YT</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="comedian-card reveal" data-testid="comedian-card-priya">
+            <div class="comedian-photo">
+              <img src="https://placehold.co/600x720/FFC93C/111111?text=PN" alt="Portrait placeholder of Priya Nair" />
+            </div>
+            <div class="comedian-body">
+              <span class="specialty">Improvisation</span>
+              <h3>Priya Nair</h3>
+              <p>
+                Quick-fire improviser who builds entire worlds from a single
+                audience suggestion. No script, no safety net, no problem.
+              </p>
+              <div class="socials">
+                <a href="#" aria-label="Priya Nair on Instagram" data-testid="social-priya-instagram">IG</a>
+                <a href="#" aria-label="Priya Nair on X" data-testid="social-priya-x">X</a>
+                <a href="#" aria-label="Priya Nair on YouTube" data-testid="social-priya-youtube">YT</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="comedian-card reveal" data-testid="comedian-card-gus">
+            <div class="comedian-photo">
+              <img src="https://placehold.co/600x720/1A160C/FFC93C?text=GM" alt="Portrait placeholder of Gus Malone" />
+            </div>
+            <div class="comedian-body">
+              <span class="specialty">Observational Comedy</span>
+              <h3>Gus Malone</h3>
+              <p>
+                Finds the ridiculous hiding inside the routine. Gus says what
+                everyone was thinking — just funnier and slightly louder.
+              </p>
+              <div class="socials">
+                <a href="#" aria-label="Gus Malone on Instagram" data-testid="social-gus-instagram">IG</a>
+                <a href="#" aria-label="Gus Malone on X" data-testid="social-gus-x">X</a>
+                <a href="#" aria-label="Gus Malone on YouTube" data-testid="social-gus-youtube">YT</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTENTS ===================== -->
+    <section class="section" id="comedians">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contents</p>
+          <h2>Stand-Up Comedy Shows</h2>
+          <p class="section-sub">
+            Take a dive into our past contents in YouTube, Full of Laughters!
+          </p>
+        </div>
+        <div class="content-grid">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum error ipsam quidem fugit deserunt numquam aliquam molestias doloremque, assumenda aut. Inventore quam minima deserunt dolor corporis at, ipsam architecto!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, suscipit harum officia soluta molestiae architecto fugit provident tempore fugiat ipsam cum maxime blanditiis, deleniti excepturi id? Eos vel mollitia numquam?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About Us</p>
+          <h2>Serious about funny</h2>
+          <p>
+            HUMOR911 is a comedy agency and production house built on one
+            belief: laughter is essential infrastructure. We represent
+            comedic talent, develop original shows, and produce live
+            experiences that people talk about on the drive home.
+          </p>
+          <p>
+            Our mission is simple — find funny people, give them great
+            stages, and treat every audience like they showed up for
+            something special. Because they did.
+          </p>
+
+          <ul class="values">
+            <li class="value-card" data-testid="value-bold">
+              <h4>Bold Voices</h4>
+              <p>We champion comedians with a point of view, not a formula.</p>
+            </li>
+            <li class="value-card" data-testid="value-craft">
+              <h4>Craft First</h4>
+              <p>Great comedy looks effortless. We obsess over the effort.</p>
+            </li>
+            <li class="value-card" data-testid="value-room">
+              <h4>Every Room Matters</h4>
+              <p>From open mics to main stages, every audience gets our best.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Replace with real photography or brand artwork -->
+        <div class="about-visual reveal" aria-hidden="true">
+          <div class="about-frame">
+            <img src="assets/humor911-logo.png" alt="" />
+            <span class="about-caption">The badge means business. Funny business.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LEGACY ===================== -->
+    <section class="section" id="legacy">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Legacy</p>
+          <h2>Building a culture of laughter</h2>
+          <p class="section-sub">
+            A conceptual look at where we're headed — no claimed awards,
+            no invented history, just the vision.
+          </p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal" data-testid="legacy-item-1">
+            <span class="timeline-num">01</span>
+            <div>
+              <h3>The Stage</h3>
+              <p>
+                Create memorable live performances — rooms where the energy
+                is electric and every set feels like an event, not a slot.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal" data-testid="legacy-item-2">
+            <span class="timeline-num">02</span>
+            <div>
+              <h3>The Next Voices</h3>
+              <p>
+                Support emerging comedians with stage time, mentorship, and
+                honest feedback. Today's open mic is tomorrow's headliner.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal" data-testid="legacy-item-3">
+            <span class="timeline-num">03</span>
+            <div>
+              <h3>The Connection</h3>
+              <p>
+                Connect audiences through shared laughter — the cheapest,
+                fastest way to turn a room of strangers into a crowd.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal" data-testid="legacy-item-4">
+            <span class="timeline-num">04</span>
+            <div>
+              <h3>The Long Game</h3>
+              <p>
+                Build a lasting comedy culture that outlives any single show —
+                a name people trust when they need a good night out.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Report a comedy emergency</h2>
+          <p>
+            Booking a comedian, pitching a show, or just want to say hi?
+            Drop us a line.
+          </p>
+          <p class="contact-email">
+            Email us at
+            <a href="mailto:hello@humor911.example" data-testid="contact-email-link">hello@humor911.example</a>
+          </p>
+          <div class="socials socials-large">
+            <a href="#" aria-label="HUMOR911 on Instagram" data-testid="social-agency-instagram">Instagram</a>
+            <a href="#" aria-label="HUMOR911 on X" data-testid="social-agency-x">X</a>
+            <a href="#" aria-label="HUMOR911 on YouTube" data-testid="social-agency-youtube">YouTube</a>
+          </div>
+          <p class="prototype-note" data-testid="prototype-note">
+            Prototype notice: this form is a frontend demo only and does not
+            send or store any data.
+          </p>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate data-testid="contact-form">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" data-testid="contact-name-input" />
+            <span class="error" id="error-name" data-testid="error-name"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" data-testid="contact-email-input" />
+            <span class="error" id="error-email" data-testid="error-email"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your event, idea, or emergency…" data-testid="contact-message-input"></textarea>
+            <span class="error" id="error-message" data-testid="error-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" data-testid="contact-submit-button">Send Message</button>
+          <p class="form-success" id="form-success" role="status" data-testid="form-success-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/humor911-logo.png" alt="HUMOR911 logo" class="brand-logo" />
+        <p class="footer-tagline">In case of boredom, break glass.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#home" data-testid="footer-nav-home">Home</a>
+        <a href="#comedians" data-testid="footer-nav-comedians">Comedians</a>
+        <a href="#about" data-testid="footer-nav-about">About Us</a>
+        <a href="#legacy" data-testid="footer-nav-legacy">Legacy</a>
+        <a href="#contact" data-testid="footer-nav-contact">Contact</a>
+      </nav>
+
+      <div class="socials">
+        <a href="#" aria-label="HUMOR911 on Instagram" data-testid="footer-social-instagram">IG</a>
+        <a href="#" aria-label="HUMOR911 on X" data-testid="footer-social-x">X</a>
+        <a href="#" aria-label="HUMOR911 on YouTube" data-testid="footer-social-youtube">YT</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 HUMOR911 Comedy Agency. Frontend prototype concept.</p>
+  </footer>
+
+  <script src="app/script.js"></script>
+  <script src="app/style.js"></script>
+</body>
+</html>
