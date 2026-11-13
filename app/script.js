@@ -22,6 +22,22 @@ function initMobileNav() {
       toggle.setAttribute("aria-expanded", "false");
     });
   });
+
+  // --- Fixing the Glitch Happens when screen width is at 768px
+  const mq = window.matchMedia("(min-width: 769px)");
+  
+  function handleBreakpoint(e) {
+    if (e.matches) {
+      // We just switched to DESKTOP (769px or wider)
+      // Clean up the mobile classes silently
+      links.classList.remove("is-open");
+      toggle.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  // Listen for the change
+  mq.addEventListener("change", handleBreakpoint);
 }
 
 /* ---------- Active navigation state on scroll ---------- */
