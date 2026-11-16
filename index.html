@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="app/styles.css" />
+  <link rel="stylesheet" href="app/netflixCarousel.css" />
 </head>
 <body>
 
@@ -32,9 +33,9 @@
         <div class="utility">
           <p id="mode">🌛</p>
           <div class="custom-select">
-            <select>
-              <option>IND</option>
-              <option>ENG</option>
+            <select class="langs" id="langSelector">
+              <option value="english">ENG</option>
+              <option value="indonesian">IND</option>
             </select>
           </div>
         </div>
@@ -51,19 +52,19 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Comedy Agency &amp; Production House</p>
-          <h1 class="hero-title">
+          <p class="eyebrow main-subtitle">Comedy Agency &amp; Production House</p>
+          <h1 class="hero-title main-title">
             Every laugh is an <span class="highlight">emergency.</span><br />
             We respond.
           </h1>
-          <p class="hero-text">
+          <p class="hero-text main-description">
             HUMOR911 represents bold comedic voices and produces live comedy
             experiences worth leaving the house for. Funny is our business —
             and we take it seriously.
           </p>
           <div class="hero-ctas">
-            <a href="#comedians" class="btn btn-primary" data-testid="cta-meet-comedians">Meet Our Comedians</a>
-            <a href="#about" class="btn btn-ghost" data-testid="cta-our-story">Our Story</a>
+            <a href="#comedians" class="btn btn-primary button-meetComedians" data-testid="cta-meet-comedians">Meet Our Comedians</a>
+            <a href="#about" class="btn btn-ghost button-ourStory" data-testid="cta-our-story">Our Story</a>
           </div>
         </div>
 
@@ -186,8 +187,17 @@
           </p>
         </div>
         <div class="content-grid">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque dolorum error ipsam quidem fugit deserunt numquam aliquam molestias doloremque, assumenda aut. Inventore quam minima deserunt dolor corporis at, ipsam architecto!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, suscipit harum officia soluta molestiae architecto fugit provident tempore fugiat ipsam cum maxime blanditiis, deleniti excepturi id? Eos vel mollitia numquam?</p>
+          <!-- Carousel Section 3: "Comedies" (optional) -->
+          <div class="carousel-container">
+            <h2 class="row-title">Comedies</h2>
+            <div class="row-wrapper" id="row3Wrapper">
+              <button class="scroll-btn left" aria-label="Scroll left" data-target="row3">‹</button>
+              <div class="carousel-row" id="row3">
+                <!-- JS generated -->
+              </div>
+              <button class="scroll-btn right" aria-label="Scroll right" data-target="row3">›</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -371,5 +381,7 @@
 
   <script src="app/script.js"></script>
   <script src="app/style.js"></script>
+  <script src="app/bilingual.js"></script>
+  <script src="app/netflixCarousel.js"></script>
 </body>
 </html>
