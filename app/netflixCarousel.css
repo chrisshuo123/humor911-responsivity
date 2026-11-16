@@ -1,0 +1,242 @@
+/* Global reset & base */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;  /* Netflix dark */
+    /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+/* Container for the whole carousel section */
+.carousel-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 4%;
+    margin-bottom: 50px;
+}
+
+/* Row title (like "Trending Now") */
+.row-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    color: #e5e5e5;
+    padding-left: 4px;
+}
+
+/* Wrapper for the row – handles the scroll & button positioning */
+.row-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* The actual scrolling row */
+.carousel-row {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0 30px 0;  /* extra space for hover effect & shadow */
+    margin: -20px 0 -30px 0;  /* compensate padding to keep layout tight */
+    scrollbar-width: none;    /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    flex: 1;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.carousel-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual movie card */
+.card {
+    flex: 0 0 auto;
+    width: 260px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+/* Card hover effect – Netflix style lift & glow */
+.card:hover {
+    transform: scale(1.08) translateY(-6px);
+    /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9), 0 0 0 2px #e50914; */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9), 0 0 0 2px #e5cb09;
+    z-index: 10;
+}
+
+/* Poster image */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    background-color: #2a2a2a;
+    transition: opacity 0.2s;
+}
+
+/* Card info (title & meta) */
+.card-info {
+    padding: 10px 12px 12px 12px;
+    background: linear-gradient(180deg, #1f1f1f 0%, #181818 100%);
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #ffffff;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #b3b3b3;
+}
+
+.match-score {
+    color: #46d369;
+    font-weight: 700;
+}
+
+.age-badge {
+    background-color: #333;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.duration {
+    font-size: 0.75rem;
+}
+
+/* Navigation buttons (chevrons) */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 100%;
+    min-height: 120px;
+    background: rgba(20, 20, 20, 0.75);
+    border: none;
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 0.2s, opacity 0.2s;
+    opacity: 0;
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    user-select: none;
+}
+
+/* Show buttons on wrapper hover */
+.row-wrapper:hover .scroll-btn {
+    opacity: 1;
+}
+
+.scroll-btn:hover {
+    background: rgba(40, 40, 40, 0.9);
+}
+
+.scroll-btn:active {
+    background: rgba(80, 80, 80, 0.9);
+}
+
+.scroll-btn.left {
+    left: -22px;
+    border-radius: 0 8px 8px 0;
+    padding-right: 6px;
+}
+
+.scroll-btn.right {
+    right: -22px;
+    border-radius: 8px 0 0 8px;
+    padding-left: 6px;
+}
+
+/* small screens: hide buttons, they are less useful */
+@media (max-width: 768px) {
+    .scroll-btn {
+    display: none;
+    }
+    .card {
+    width: 180px;
+    }
+    .card img {
+    height: 110px;
+    }
+    .row-title {
+    font-size: 1.3rem;
+    }
+}
+
+/* second row variations to show multiple examples */
+.row-wrapper.second .card {
+    width: 220px;
+}
+.row-wrapper.second .card img {
+    height: 130px;
+}
+
+@media (max-width: 768px) {
+    .row-wrapper.second .card {
+        width: 160px;
+    }
+    .row-wrapper.second .card img {
+        height: 100px;
+    }
+}
+
+/* Dummy data note: images from picsum with different seeds for variety */
+.note {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ============================ */
+/* <!-- Additional style to make images look a bit more "cinematic" (optional) --> */
+/* Slight gradient overlay on cards for text readability - not needed as info is below image */
+/* But we can add a subtle vignette effect on images */
+.card img {
+    transition: filter 0.2s;
+}
+.card:hover img {
+    filter: brightness(1.05) contrast(1.02);
+}
+
+/* Make the left/right buttons look a bit nicer on focus */
+.scroll-btn:focus-visible {
+    outline: 2px solid #e50914;
+    outline-offset: 2px;
+}
