@@ -5,6 +5,7 @@ What's being modified Manually:
 
 In Modification:
 - Translation (Indonesian / English).  In the future, it'll be from Malaysia, India, Itally.
+- Comedians List: Create Comedians DB & server list, while doing entry data manually listing Humor911's comedians outside of our Web Development (or IT) Scope.  For backends, we intentionally don't create them in this repository.
 
 We Intentionally didn't make any modifications on this Repository, to avoid irresponsible developers stealling other people's ideas:
 - Backends (Database & Servers)
