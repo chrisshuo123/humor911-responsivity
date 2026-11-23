@@ -83,7 +83,7 @@ body {
 /* Poster image */
 .card img {
     width: 100%;
-    height: 150px;
+    height: 260px;
     object-fit: cover;
     display: block;
     background-color: #2a2a2a;
@@ -192,7 +192,7 @@ body {
     width: 180px;
     }
     .card img {
-    height: 110px;
+    height: 180px;
     }
     .row-title {
     font-size: 1.3rem;
